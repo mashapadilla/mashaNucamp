@@ -12,6 +12,7 @@
     </head>
     
     <body>
+    
         <header class="jumbotron jumbotron-fluid">
             <div class="container">
                 <div class="row">
@@ -24,63 +25,12 @@
                     </div>
                     <div class="col-md-4 col-lg-2">
                         
-                        <a id=#reserveModal role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+                        <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="Or call us at <br /><strong>1-206-555-1234</strong>">Reserve Campsite</a>
                     </div>
                 </div>
             </div>
         </header>
-        <div id="reserveModal" class="modal fade" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header bg-info text-white">
-                        <h3 class="modal-title">Reserve a campsite </h3>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="container-fluid">
-                            <form id="reserveForm">
-                                <div class="row form-group">
-                                    <label for="numCampers" class="col-sm-6 col-form-label">Number of campers</label>
-                                    <select class="form-control col-sm-6" id="numCampers">
-                                      <option value="Select">Select</option>
-                                      <option value="1">1</option>
-                                      <option value="2">2</option>
-                                      <option value="3">3</option>
-                                      <option value="4">4</option>
-                                      <option value="5">5</option>
-                                      <option value="6">6</option>
-                                    </select>
-                                </div>
-                                <div class="row form-group">
-                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                    <div class="col-sm-6 dateLabel">
-                                        <input class="form-control m-0" type="date" id="date" placeholder="MM/DD/YYYY">
-                                    </div>
-                                </div>
-                                <div class="row form-group">
-                                    <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                    <div class="p-0 col btn-group btm-group-toggle" data-toggle="buttons">
-                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                         <label class= "btn btn-success active pull-left">
-                                          <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked> Tent
-                                        </label>
-                                        <label class="btn btn-primary">
-                                          <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
-                                        </label> 
-                                     </div>
-                                    </div>
-                                </div>
-
-                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-primary btn-sm ml-1">Search</button>  
-
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+    
         <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
             <div class="container">
                 <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a> 
@@ -163,6 +113,7 @@
                                     <h3>React Lake Campground</h3>
                                     <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
                                 </div>
+                            
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
@@ -180,19 +131,12 @@
                             <span class="carousel-control-next-icon"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                        <div class="btn-group" id="carouselButton">
-                            <button class="btn btn-danger btn-sm" id="carouselPause">
-                                <i class="fa fa-pause"></i>
-                            </button>
-                            <button class="btn btn-danger btn-sm" id="carouselPlay">
-                                <i class="fa fa-play"></i>
-                            </button>
-                        </div>
 
                     </div>
                 </div>
             </div>
             <div class="row row-content align-items-center">
+              
                 <div class="col">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
@@ -220,11 +164,11 @@
                     </div>
                 </div>
         
-                <div class="row row-content align-items-center">
-                 <div class="col-sm-4 order-sm-last col-md-3">
+            <div class="row row-content align-items-center">
+                <div class="col-sm-4 order-sm-last col-md-3">
                     <h2 class="text-sm-right">Our Community Partners</h2>
-                 </div>
-                 <div class="col">
+                </div>
+                <div class="col">
                     <div class="media">
                         <img class="d-flex mr-3 img-thumbnail " src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters">
                         <div class="media-body align-self-center">
@@ -232,10 +176,47 @@
                             <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
                         </div>
                     </div>
-                 </div>
                 </div>
-            </div>   
+            </div>
+            
+        <div class="container">
+            <div class="row row-content align-items-center">
+                <div class="col-sm-6 mx-auto">
+                  <div class="card">
+                    <h3 class="card-header bg-info text-white">Reserve a campsite</h3>
+                  </div>
+                 <div class="card-body form-control">
+                    <form id="reserveForm">
+                        <div class="row form-group">
+                            <label for="numCampers" class="col-sm-6 col-form-label">Number of campers</label>
+                            <select class="form-control col-sm-6" id="numCampers">
+                              <option value="Select">Select</option>
+                              <option value="1">1</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5</option>
+                              <option value="6">6</option>
+                            </select>
+                        </div>
+                        <div class="row form-group">
+                            <label for="date" class="col-sm-6 col-form-label">Date</label>
+                            <div class="col-sm-6 dateLabel">
+                                <input class="form-control m-0" type="date" id="date" placeholder="MM/DD/YYYY">
+                            </div>
+                        </div>
+                        <div class="row col-sm">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </form>
+                </div> 
+                </div>
+            </div>
+           
         </div>
+        
+    
+    </div>
         
         <footer class="site-footer">
             <div class="container">
@@ -268,19 +249,12 @@
         <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
         <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
         <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
         <script>
-            $(function() {
-                $(".carousel").carousel( { interval: 2000 } );
-                $("#carouselPause").click(function(){
-                    $(".carousel").carousel("pause");
-                });
-                $("#carouselPlay").click(function(){
-                    $(".carousel").carousel("cycle");
-                });
-            });
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
         </script>
-        
+    
     </body>
 
 </html>
