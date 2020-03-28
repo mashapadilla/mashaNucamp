@@ -26,13 +26,13 @@
                     </div>
                     <div class="col-md-4 col-lg-2">
                         
-                        <a id=#reserveModal role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+                        <a id="reserveButton" role="button" class="btn btn-lg btn-info">Reserve Campsite</a>
                     </div>
                 </div>
             </div>
         </header>
         <div id="reserveModal" class="modal fade" role="dialog">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header bg-info text-white">
                         <h3 class="modal-title">Reserve a campsite </h3>
@@ -43,33 +43,34 @@
                             <form id="reserveForm">
                                 <div class="row form-group">
                                     <label for="numCampers" class="col-sm-6 col-form-label">Number of campers</label>
-                                    <select class="form-control col-sm-6" id="numCampers">
-                                      <option value="Select">Select</option>
-                                      <option value="1">1</option>
-                                      <option value="2">2</option>
-                                      <option value="3">3</option>
-                                      <option value="4">4</option>
-                                      <option value="5">5</option>
-                                      <option value="6">6</option>
-                                    </select>
-                                </div>
-                                <div class="row form-group">
-                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
-                                    <div class="col-sm-6 dateLabel">
-                                        <input class="form-control m-0" type="date" id="date" placeholder="MM/DD/YYYY">
+                                    <div class="col">
+                                        <select class="form-control " id="numCampers">
+                                            <option value="Select">Select</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="row form-group">
+                                    <label for="date" class="col-sm-6 col-form-label">Date</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="date" name="date" id="date">
+                                    </div>
+                                </div>
+
+                                <div class="row form-group">
                                     <label class="col-sm-6 col-form-label">Campsite Type</label>
-                                    <div class="p-0 col btn-group btm-group-toggle" data-toggle="buttons">
-                                     <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                         <label class= "btn btn-success active pull-left">
-                                          <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked> Tent
+                                    <div class="p-0 btn-group btn-group-toggle ml-3" data-toggle="buttons">
+                                        <label class= "btn btn-success active pull-left">
+                                            <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
                                         </label>
                                         <label class="btn btn-primary">
-                                          <input type="radio" name="siteType" id="siteRV" autocomplete="off"> RV
+                                           <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off" checked> RV
                                         </label> 
-                                     </div>
                                     </div>
                                 </div>
 
@@ -109,7 +110,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <h3 class="modal-title">Login </h3>
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <button type="button" class="close" id="loginButton">&times;</button>
                     </div>
                     <div class="modal-body">
                         <div class="container-fluid">
